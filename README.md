@@ -19,6 +19,6 @@ And here are the challenges we've met during the setup. Please feel free to read
 
 So, back to our topic:
 
-> Below is the machine learning workflow we're running via HTCondor ecosystem:
+- Below is the machine learning workflow we're running via HTCondor ecosystem:
 
 ![image](https://github.com/user-attachments/assets/b69c43e1-e780-499b-9258-4d3658b8958d)
