@@ -58,8 +58,7 @@ Open another SSH terminal to execute the following commands:
 
 5\. Click “Endpoints” tab, and click the URL there to access:
 
-![](/images/1_Part%203%20-
-%20Install%20Jupyter%20noteb.jpg)
+![](/images/1_Part%203%20-%20Install%20Jupyter%20noteb.jpg)
 
 Reference
 ---------
