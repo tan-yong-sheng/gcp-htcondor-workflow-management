@@ -539,9 +539,9 @@ print("Task completed!")
 Part 2: Create DAG file for workflow management
 -----------------------------------------------
 
-At last, we're e
+At last, we're using Python to create a DAG file to manage workflow of our machine learning training task.
 
-```text-plain
+```python
 import htcondor
 import os
 from htcondor import dags
