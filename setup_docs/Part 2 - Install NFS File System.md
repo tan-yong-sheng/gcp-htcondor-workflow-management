@@ -1,5 +1,4 @@
 # Part 2 - Install NFS File System
-Part 2: NFS File System Setup Guide
 -----------------------------------
 
 Step 1: Configure NFS Server (in HTCondor Submit Node)
