@@ -1,5 +1,4 @@
-# Docker Runtime Setup Guide on HTCondor
-Docker Runtime On HTCondor Executor Machines:
+# Docker Runtime Setup Guide on HTCondor Executors
 ---------------------------------------------
 
 Actually I don't like to use `sudo pip install …` on the HTCondor Executors, because othe security reasons.
