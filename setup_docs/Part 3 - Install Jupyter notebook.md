@@ -7,20 +7,20 @@ Step 1: Install Jupyter Notebook
 
 1\. On submit host, install required Python libraries, and start the Jupyter notebook:
 
-```text-plain
+```bash
 > pip install jupyter
 > python3 -m notebook
 ```
 
 2\. Allow the Jupyter Notebook to be accessed remotely by changing the configuration of your Jupyter Notebook
 
-```text-plain
+```bash
 > jupyter notebook --generate-config
 ```
 
 3\. Then run the code below:
 
-```text-plain
+```bash
 > echo "c.NotebookApp.allow_remote_access = True" >> ~/.jupyter/jupyter_notebook_config.py
 ```
 
@@ -31,7 +31,7 @@ Open another SSH terminal to execute the following commands:
 
 1\. Install ngrok via Apt with the following command:
 
-```text-plain
+```bash
 > curl -sSL https://ngrok-agent.s3.amazonaws.com/ngrok.asc \
 	| sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null \
 	&& echo "deb https://ngrok-agent.s3.amazonaws.com buster main" \
@@ -42,11 +42,11 @@ Open another SSH terminal to execute the following commands:
 
 2\. Go to Ngrok dashboard to get your Ngrok's auth token: [https://dashboard.ngrok.com/get-started/your-authtoken](https://dashboard.ngrok.com/get-started/your-authtoken) 
 
-![](Part 3 - Install Jupyter noteb.jpg)
+![](/images/Part%203%20-%20Install%20Jupyter%20noteb.jpg)
 
 3\. Authenticate your ngrok agent:
 
-```text-plain
+```bash
 > ngrok authtoken <YOUR_AUTH_TOKEN>
 ```
 
@@ -58,7 +58,8 @@ Open another SSH terminal to execute the following commands:
 
 5\. Click “Endpoints” tab, and click the URL there to access:
 
-![](1_Part 3 - Install Jupyter noteb.jpg)
+![](/images/1_Part%203%20-
+%20Install%20Jupyter%20noteb.jpg)
 
 Reference
 ---------

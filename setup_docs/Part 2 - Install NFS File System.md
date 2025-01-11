@@ -7,22 +7,22 @@ Step 1: Configure NFS Server (in HTCondor Submit Node)
 
 1\. Install NFS server packages:
 
-```text-plain
+```bash
 > sudo apt update
 > sudo apt install nfs-kernel-server
 ```
 
-![](4_Part 2 - Install NFS File Syst.jpg)
+![](/images/4_Part%202%20-%20Install%20NFS%20File%20Syst.jpg)
 
 2\. Create the shared directory:
 
-```text-plain
+```bash
 > sudo mkdir -p /home/tanyongsheng_net/data
 ```
 
 3\. Configure NFS exports:
 
-```text-plain
+```bash
 > sudo nano /etc/exports
 ```
 
@@ -32,26 +32,26 @@ Step 1: Configure NFS Server (in HTCondor Submit Node)
 /home/tanyongsheng_net/data *(rw,sync,no_subtree_check,no_root_squash)
 ```
 
-![](15_Part 2 - Install NFS File Syst.png)
+![](/images/15_Part%202%20-%20Install%20NFS%20File%20Syst.png)
 
 4\. Apply the NFS configuration:
 
-```text-plain
+```bash
 > sudo exportfs -a
 ```
 
-![](1_Part 2 - Install NFS File Syst.jpg)
+![](/images/1_Part%202%20-%20Install%20NFS%20File%20Syst.jpg)
 
 5\. Restart NFS service:
 
-```text-plain
+```bash
 > sudo systemctl restart nfs-kernel-server
 > sudo systemctl status nfs-kernel-server
 ```
 
 6\. Set up permissions:
 
-```text-plain
+```bash
 > sudo mkdir /home/nobody
 > sudo chown nobody:nogroup /home/nobody/
 > sudo chmod 777 /home/nobody/
@@ -63,7 +63,7 @@ Step 1: Configure NFS Server (in HTCondor Submit Node)
 
 *   Change permission access to Condor group
 
-```text-plain
+```bash
 > sudo mkdir /home/nobody
 > sudo chown nobody:nogroup /home/nobody/
 > sudo chmod 777 /home/nobody/
@@ -76,40 +76,40 @@ Step 1: Configure NFS Server (in HTCondor Submit Node)
 
 *   Test if this works for `Condor` group to create and write the file
 
-```text-plain
+```bash
 > sudo -u condor touch /home/tanyongsheng_net/data/testfile.txt
 ```
 
-![](17_Part 2 - Install NFS File Syst.png)
+![](/images/17_Part%202%20-%20Install%20NFS%20File%20Syst.png)
 
 ### Step 2: Configure NFS Common (in HTCondor Executor Nodes)
 
 1\. Install NFS common packages:
 
-```text-plain
+```bash
 > sudo apt update
 > sudo apt install nfs-common
 ```
 
 *   Edit hosts file:
 
-```text-plain
+```bash
 > sudo nano /etc/hosts
 ```
 
-![](16_Part 2 - Install NFS File Syst.png)
+![](/images/16_Part%202%20-%20Install%20NFS%20File%20Syst.png)
 
-```text-plain
+```bash
 > sudo mkdir -p /home/tanyongsheng_net/data
 ```
 
-![](10_Part 2 - Install NFS File Syst.png)
+![](/images/10_Part%202%20-%20Install%20NFS%20File%20Syst.png)
 
 ```text-plain
 > sudo mount CondorSubmit:home/tanyongsheng_net/data /home/tanyongsheng_net/data/
 ```
 
-![](13_Part 2 - Install NFS File Syst.png)
+![](/images/13_Part%202%20-%20Install%20NFS%20File%20Syst.png)
 
 ### Bonus tips: Auto-mounting for HTCondor Executor
 
@@ -123,14 +123,14 @@ The general syntax for the line in `/etc/fstab` file is as follows:
 CondorSubmit:home/tanyongsheng_net/data /home/tanyongsheng_net/data nfs rsize=8192,wsize=8192,timeo=14,intr
 ```
 
-![](14_Part 2 - Install NFS File Syst.png)
+![](/images/14_Part%202%20-%20Install%20NFS%20File%20Syst.png)
 
 *   Make sure your HTCondor's Executor have required permission to access the file in NFS filesystem
 
 Try 
 
-```text-plain
+```bash
 > sudo usermod -aG tanyongsheng_net condor
 ```
 
-![](19_Part 2 - Install NFS File Syst.png)
+![](/images/19_Part%202%20-%20Install%20NFS%20File%20Syst.png)

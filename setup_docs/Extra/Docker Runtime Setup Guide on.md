@@ -6,7 +6,7 @@ Actually I don't like to use `sudo pip install …` on the HTCondor Executors, b
 
 1\. Install Docker in HTCondor Executors
 
-```text-plain
+```bash
 # Add Docker's official GPG key:
 > sudo apt-get update
 > sudo apt-get install ca-certificates curl
@@ -22,7 +22,7 @@ Actually I don't like to use `sudo pip install …` on the HTCondor Executors, b
 > sudo apt-get update
 ```
 
-```text-plain
+```bash
 > sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
@@ -33,20 +33,20 @@ Actually I don't like to use `sudo pip install …` on the HTCondor Executors, b
 > sudo docker run hello-world
 ```
 
-![](Docker Runtime Setup Guide on.png)
+![](/images/Docker%20Runtime%20Setup%20Guide%20on.png)
 
-![](1_Docker Runtime Setup Guide on.png)
+![](/images/1_Docker%20Runtime%20Setup%20Guide%20on.png)
 
 3\. Create the directory: `~/ml_py310_image`
 
-```text-plain
+```bash
 > mkdir -p ~/ml_py310_image
 > nano ~/ml_py310_image/Dockerfile
 ```
 
 *   File location: `~/ml_py310_image/Dockerfile`
 
-```text-plain
+```bash
 # Use an official Python base image
 FROM python:3.10-slim
 
@@ -61,7 +61,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 *   File location: `requirements.txt`
 
-```text-plain
+```bash
 # requirements.txt
 scikit-learn==1.6.0
 pandas==2.2.3
@@ -70,16 +70,16 @@ numpy==2.2.1
 
 4\. Building the Docker's Python image:
 
-```text-plain
+```bash
 > cd ~/ml_py310_image
 > sudo docker build -t pyenv310:v1 .
 ```
 
-```text-plain
+```bash
 > sudo docker images
 ```
 
-![](2_Docker Runtime Setup Guide on.png)
+![](/images/2_Docker%20Runtime%20Setup%20Guide%20on.png)
 
 *    Check which groups that the user `condor` is a part of:
 
@@ -87,7 +87,7 @@ numpy==2.2.1
 > groups condor
 ```
 
-![](3_Docker Runtime Setup Guide on.png)
+![](/images/3_Docker%20Runtime%20Setup%20Guide%20on.png)
 
 *   Check if the `condor` user has the permission to run Docker service
 
@@ -97,7 +97,7 @@ numpy==2.2.1
 
 And ya, it's permission error!
 
-![](4_Docker Runtime Setup Guide on.png)
+![](/images/4_Docker%20Runtime%20Setup%20Guide%20on.png)
 
 Let's try to add `condor` user in `docker` group 
 
@@ -106,7 +106,7 @@ Let's try to add `condor` user in `docker` group 
 > sudo systemctl restart condor
 ```
 
-![](5_Docker Runtime Setup Guide on.png)
+![](/images/5_Docker%20Runtime%20Setup%20Guide%20on.png)
 
 *   Yah! Now, it's working!
 
@@ -114,7 +114,7 @@ Let's try to add `condor` user in `docker` group 
 > sudo -u condor docker run hello-world
 ```
 
-![](6_Docker Runtime Setup Guide on.png)
+![](/images/6_Docker%20Runtime%20Setup%20Guide%20on.png)
 
 How HTCondor can utilize this Docker runtime for its HTCondor jobs
 ------------------------------------------------------------------

@@ -88,7 +88,7 @@ data.to_csv(split_data_dir / "processed_data.csv")
 
 *   The sample for the above steps is as follows: 
 
-![](2_Part 4 -  Managing HTCondor Jo.png)
+![](/images/2_Part%204%20-%20%20Managing%20HTCondor%20Jo.png)
 
 ### Step 2: Train test split
 
@@ -651,56 +651,56 @@ After executing the above scripts in Jupyter notebook, `dagfile.dag` will be cre
 
 *   File location: `/home/tanyongsheng_net/data/dags/dagfile.dag`
 
-![](4_Part 4 -  Managing HTCondor Jo.png)
+![](/images/4_Part%204%20-%20%20Managing%20HTCondor%20Jo.png)
 
 Some other submit files (`.sub`) will also be created as follows:
 
-![](Part 4 -  Managing HTCondor Jo.jpg)
+![](/images/Part%204%20-%20%20Managing%20HTCondor%20Jo.jpg)
 
 *   File location: `/home/tanyongsheng_net/data/dags/data_processing.sub`
 
-![](5_Part 4 -  Managing HTCondor Jo.png)
+![](/images/5_Part%204%20-%20%20Managing%20HTCondor%20Jo.png)
 
 *   File location: `/home/tanyongsheng_net/data/dags/train_test_split.sub`
 
-![](6_Part 4 -  Managing HTCondor Jo.png)
+![](/images/6_Part%204%20-%20%20Managing%20HTCondor%20Jo.png)
 
 *   File location: `/home/tanyongsheng_net/data/dags/modeling_v1.sub`
 
-![](7_Part 4 -  Managing HTCondor Jo.png)
+![](/images/7_Part%204%20-%20%20Managing%20HTCondor%20Jo.png)
 
 *   File location: `/home/tanyongsheng_net/data/dags/modeling_v2.sub`
 
-![](8_Part 4 -  Managing HTCondor Jo.png)
+![](/images/8_Part%204%20-%20%20Managing%20HTCondor%20Jo.png)
 
 *   File location: `/home/tanyongsheng_net/data/dags/evaluate_model_v1.sub`
 
-![](9_Part 4 -  Managing HTCondor Jo.png)
+![](/images/9_Part%204%20-%20%20Managing%20HTCondor%20Jo.png)
 
 *   File location: `/home/tanyongsheng_net/data/dags/evaluate_model_v2.sub`
 
-![](10_Part 4 -  Managing HTCondor Jo.png)
+![](/images/10_Part%204%20-%20%20Managing%20HTCondor%20Jo.png)
 
 *   File location: `/home/tanyongsheng_net/data/dags/deploy_best_model.sub`
 
-![](11_Part 4 -  Managing HTCondor Jo.png)
+![](/images/11_Part%204%20-%20%20Managing%20HTCondor%20Jo.png)
 
 *   File location: `/home/tanyongsheng_net/data/dags/loan_prediction.sub`
 
-![](12_Part 4 -  Managing HTCondor Jo.png)
+![](/images/12_Part%204%20-%20%20Managing%20HTCondor%20Jo.png)
 
 ```text-plain
 > cd ~/data/dags
 > condor_submit_dag -f dagfile.dag
 ```
 
-![](15_Part 4 -  Managing HTCondor Jo.png)
+![](/images/15_Part%204%20-%20%20Managing%20HTCondor%20Jo.png)
 
 ```text-plain
 > watch -n 1 condor_q
 ```
 
-![](16_Part 4 -  Managing HTCondor Jo.png)
+![](/images/16_Part%204%20-%20%20Managing%20HTCondor%20Jo.png)
 
 Result
 ------
@@ -709,7 +709,7 @@ According to the diagram below, we have successfully run all 8 tasks via this DA
 
 *   File location: `~/data/dags/dagfile.dag.metrics`
 
-![](14_Part 4 -  Managing HTCondor Jo.png)
+![](/images/14_Part%204%20-%20%20Managing%20HTCondor%20Jo.png)
 
 References
 ----------
