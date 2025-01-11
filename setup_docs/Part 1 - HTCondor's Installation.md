@@ -12,7 +12,7 @@ Part 1: HTCondor Installation Guide
     | VM3 | Condor Executor 01 | e2-medium | 2   | 4 GB | 10 GB | *   Condor Executor Program with Python environment |
     | VM4 | Condor Executor 02 | e2-medium | 2   | 4 GB | 10 GB | *   Condor Executor Program with Python environment |
     
-%20
+
 ![](/images/10_Part%201%20-%20HTCondor's%20Installati.jpg)
 
 Just a note here, I am using the default network assigned by Google System for all 4 VM instances, without change any settings here.
