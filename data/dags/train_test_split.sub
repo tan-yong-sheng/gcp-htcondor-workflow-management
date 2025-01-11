@@ -1,0 +1,9 @@
+executable = /home/tanyongsheng_net/data/scripts/train_test_split_data.py
+request_cpus = 1
+request_memory = 128MB
+request_disk = 128MB
+output = /home/tanyongsheng_net/data/output/train_test_split_data.out
+error = /home/tanyongsheng_net/data/error/train_test_split_data.err
+log = /home/tanyongsheng_net/data/log/train_test_split_data.log
+
+queue

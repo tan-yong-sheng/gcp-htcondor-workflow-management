@@ -1,0 +1,9 @@
+executable = /home/tanyongsheng_net/data/scripts/evaluate_model_v1.py
+request_cpus = 1
+request_memory = 128MB
+request_disk = 128MB
+output = /home/tanyongsheng_net/data/output/evaluate_model_v1.out
+error = /home/tanyongsheng_net/data/error/evaluate_model_v1.err
+log = /home/tanyongsheng_net/data/log/evaluate_model_v1.log
+
+queue

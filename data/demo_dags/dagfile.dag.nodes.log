@@ -1,0 +1,124 @@
+000 (029.000.000) 2025-01-09 13:12:12 Job submitted from host: <10.128.0.6:9618?addrs=10.128.0.6-9618&alias=condor-submit.us-central1-f.c.wqd7008-assignment.internal&noUDP&sock=schedd_6141_cb2f>
+    DAG Node: Task1:0
+...
+001 (029.000.000) 2025-01-09 13:12:32 Job executing on host: <10.128.0.4:9618?addrs=10.128.0.4-9618&alias=condor-executor-01.us-central1-b.c.wqd7008-assignment.internal&noUDP&sock=startd_1062_05ab>
+	SlotName: slot1_2@condor-executor-01.us-central1-b.c.wqd7008-assignment.internal
+	CondorScratchDir = "/var/lib/condor/execute/dir_1608"
+	Cpus = 1
+	Disk = 132096
+	GPUs = 0
+	Memory = 128
+...
+005 (029.000.000) 2025-01-09 13:12:35 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	32  -  Run Bytes Sent By Job
+	151  -  Run Bytes Received By Job
+	32  -  Total Bytes Sent By Job
+	151  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     0.02        1         1 
+	   Disk (KB)            :    18      131072    132096 
+	   GPUs                 :                           0 
+	   Memory (MB)          :     1         128       128 
+	   TimeExecute (s)      :     3                       
+	   TimeSlotBusy (s)     :     4                       
+
+	Job terminated of its own accord at 2025-01-09T13:12:35Z with exit-code 0.
+...
+000 (030.000.000) 2025-01-09 13:12:42 Job submitted from host: <10.128.0.6:9618?addrs=10.128.0.6-9618&alias=condor-submit.us-central1-f.c.wqd7008-assignment.internal&noUDP&sock=schedd_6141_cb2f>
+    DAG Node: Task3:0
+...
+000 (031.000.000) 2025-01-09 13:12:42 Job submitted from host: <10.128.0.6:9618?addrs=10.128.0.6-9618&alias=condor-submit.us-central1-f.c.wqd7008-assignment.internal&noUDP&sock=schedd_6141_cb2f>
+    DAG Node: Task2:0
+...
+001 (030.000.000) 2025-01-09 13:12:43 Job executing on host: <10.128.0.4:9618?addrs=10.128.0.4-9618&alias=condor-executor-01.us-central1-b.c.wqd7008-assignment.internal&noUDP&sock=startd_1062_05ab>
+	SlotName: slot1_2@condor-executor-01.us-central1-b.c.wqd7008-assignment.internal
+	CondorScratchDir = "/var/lib/condor/execute/dir_1613"
+	Cpus = 1
+	Disk = 132096
+	GPUs = 0
+	Memory = 128
+...
+005 (030.000.000) 2025-01-09 13:12:48 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	32  -  Run Bytes Sent By Job
+	151  -  Run Bytes Received By Job
+	32  -  Total Bytes Sent By Job
+	151  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :        0        1         1 
+	   Disk (KB)            :       18   131072    132096 
+	   GPUs                 :                           0 
+	   Memory (MB)          :        1      128       128 
+	   TimeExecute (s)      :        5                    
+	   TimeSlotBusy (s)     :        6                    
+
+	Job terminated of its own accord at 2025-01-09T13:12:48Z with exit-code 0.
+...
+001 (031.000.000) 2025-01-09 13:12:49 Job executing on host: <10.128.0.4:9618?addrs=10.128.0.4-9618&alias=condor-executor-01.us-central1-b.c.wqd7008-assignment.internal&noUDP&sock=startd_1062_05ab>
+	SlotName: slot1_2@condor-executor-01.us-central1-b.c.wqd7008-assignment.internal
+	CondorScratchDir = "/var/lib/condor/execute/dir_1617"
+	Cpus = 1
+	Disk = 132096
+	GPUs = 0
+	Memory = 128
+...
+005 (031.000.000) 2025-01-09 13:12:54 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	32  -  Run Bytes Sent By Job
+	151  -  Run Bytes Received By Job
+	32  -  Total Bytes Sent By Job
+	151  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :        0        1         1 
+	   Disk (KB)            :       18   131072    132096 
+	   GPUs                 :                           0 
+	   Memory (MB)          :        1      128       128 
+	   TimeExecute (s)      :        5                    
+	   TimeSlotBusy (s)     :        6                    
+
+	Job terminated of its own accord at 2025-01-09T13:12:54Z with exit-code 0.
+...
+000 (032.000.000) 2025-01-09 13:13:02 Job submitted from host: <10.128.0.6:9618?addrs=10.128.0.6-9618&alias=condor-submit.us-central1-f.c.wqd7008-assignment.internal&noUDP&sock=schedd_6141_cb2f>
+    DAG Node: Task4:0
+...
+001 (032.000.000) 2025-01-09 13:13:03 Job executing on host: <10.128.0.4:9618?addrs=10.128.0.4-9618&alias=condor-executor-01.us-central1-b.c.wqd7008-assignment.internal&noUDP&sock=startd_1062_05ab>
+	SlotName: slot1_2@condor-executor-01.us-central1-b.c.wqd7008-assignment.internal
+	CondorScratchDir = "/var/lib/condor/execute/dir_1621"
+	Cpus = 1
+	Disk = 132096
+	GPUs = 0
+	Memory = 128
+...
+005 (032.000.000) 2025-01-09 13:13:06 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	32  -  Run Bytes Sent By Job
+	151  -  Run Bytes Received By Job
+	32  -  Total Bytes Sent By Job
+	151  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :        0        1         1 
+	   Disk (KB)            :       18   131072    132096 
+	   GPUs                 :                           0 
+	   Memory (MB)          :        1      128       128 
+	   TimeExecute (s)      :        3                    
+	   TimeSlotBusy (s)     :        4                    
+
+	Job terminated of its own accord at 2025-01-09T13:13:06Z with exit-code 0.
+...

@@ -1,0 +1,9 @@
+executable = /home/tanyongsheng_net/data/scripts/deploy_model.py
+request_cpus = 1
+request_memory = 128MB
+request_disk = 128MB
+output = /home/tanyongsheng_net/data/output/deploy_model.out
+error = /home/tanyongsheng_net/data/error/deploy_model.err
+log = /home/tanyongsheng_net/data/log/deploy_model.log
+
+queue

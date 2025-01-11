@@ -1,0 +1,9 @@
+executable = /home/tanyongsheng_net/data/scripts/data_processing.py
+request_cpus = 1
+request_memory = 128MB
+request_disk = 128MB
+output = /home/tanyongsheng_net/data/output/data_processing.out
+error = /home/tanyongsheng_net/data/error/data_processing.err
+log = /home/tanyongsheng_net/data/log/data_processing.log
+
+queue

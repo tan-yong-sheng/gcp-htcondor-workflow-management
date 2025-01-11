@@ -1,0 +1,20 @@
+# BEGIN META
+# END META
+# BEGIN NODES AND EDGES
+JOB data_processing:0 data_processing.sub
+PARENT data_processing:0 CHILD train_test_split:0
+JOB train_test_split:0 train_test_split.sub
+PARENT train_test_split:0 CHILD modeling_v2:0
+PARENT train_test_split:0 CHILD modeling_v1:0
+JOB modeling_v2:0 modeling_v2.sub
+PARENT modeling_v2:0 CHILD evaluate_model_v2:0
+JOB modeling_v1:0 modeling_v1.sub
+PARENT modeling_v1:0 CHILD evaluate_model_v1:0
+JOB evaluate_model_v2:0 evaluate_model_v2.sub
+PARENT evaluate_model_v2:0 CHILD deploy_best_model:0
+JOB evaluate_model_v1:0 evaluate_model_v1.sub
+PARENT evaluate_model_v1:0 CHILD deploy_best_model:0
+JOB deploy_best_model:0 deploy_best_model.sub
+PARENT deploy_best_model:0 CHILD loan_prediction:0
+JOB loan_prediction:0 loan_prediction.sub
+# END NODES AND EDGES

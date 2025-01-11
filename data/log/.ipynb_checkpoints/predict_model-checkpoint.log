@@ -1,0 +1,44 @@
+000 (204.000.000) 2025-01-10 15:27:03 Job submitted from host: <10.128.0.6:9618?addrs=10.128.0.6-9618&alias=condor-submit.us-central1-f.c.wqd7008-assignment.internal&noUDP&sock=schedd_478_725c>
+    DAG Node: loan_prediction:0
+...
+040 (204.000.000) 2025-01-10 15:27:03 Started transferring input files
+	Transferring to host: <10.128.0.4:9618?addrs=10.128.0.4-9618&alias=condor-executor-01.us-central1-b.c.wqd7008-assignment.internal&noUDP&sock=slot1_1_868_559c_13>
+...
+040 (204.000.000) 2025-01-10 15:27:03 Finished transferring input files
+...
+001 (204.000.000) 2025-01-10 15:27:04 Job executing on host: <10.128.0.4:9618?addrs=10.128.0.4-9618&alias=condor-executor-01.us-central1-b.c.wqd7008-assignment.internal&noUDP&sock=startd_765_4e0a>
+	SlotName: slot1_1@condor-executor-01.us-central1-b.c.wqd7008-assignment.internal
+	CondorScratchDir = "/var/lib/condor/execute/dir_2382"
+	Cpus = 1
+	Disk = 132096
+	GPUs = 0
+	Memory = 256
+...
+006 (204.000.000) 2025-01-10 15:27:06 Image size of job updated: 72
+	1  -  MemoryUsage of job (MB)
+	72  -  ResidentSetSize of job (KB)
+...
+040 (204.000.000) 2025-01-10 15:27:06 Started transferring output files
+...
+040 (204.000.000) 2025-01-10 15:27:06 Finished transferring output files
+...
+005 (204.000.000) 2025-01-10 15:27:06 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:01, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:01, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	276  -  Run Bytes Sent By Job
+	1034  -  Run Bytes Received By Job
+	276  -  Total Bytes Sent By Job
+	1034  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :        0        1         1 
+	   Disk (KB)            :       19   131072    132096 
+	   GPUs                 :                           0 
+	   Memory (MB)          :        1      128       256 
+	   TimeExecute (s)      :        2                    
+	   TimeSlotBusy (s)     :        3                    
+
+	Job terminated of its own accord at 2025-01-10T15:27:06Z with exit-code 0.
+...

@@ -1,0 +1,9 @@
+executable = /home/tanyongsheng_net/data/scripts/data_modeling_v1.py
+request_cpus = 1
+request_memory = 200MB
+request_disk = 128MB
+output = /home/tanyongsheng_net/data/output/data_modeling_v1.out
+error = /home/tanyongsheng_net/data/error/data_modeling_v1.err
+log = /home/tanyongsheng_net/data/log/data_modeling_v1.log
+
+queue

@@ -1,0 +1,15 @@
+000 (205.000.000) 2025-01-11 10:56:33 Job submitted from host: <10.128.0.6:9618?addrs=10.128.0.6-9618&alias=condor-submit.us-central1-f.c.wqd7008-assignment.internal&noUDP&sock=schedd_511_14fc>
+...
+001 (205.000.000) 2025-01-11 10:56:33 Job executing on host: <10.128.0.6:9618?addrs=10.128.0.6-9618&alias=condor-submit.us-central1-f.c.wqd7008-assignment.internal&noUDP&sock=schedd_511_14fc>
+...
+005 (205.000.000) 2025-01-11 10:58:09 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+...

@@ -1,0 +1,21 @@
+{
+    "client":"condor_dagman",
+    "version":"23.10.19",
+    "type":"metrics",
+    "start_time":1736428331.552,
+    "end_time":1736428387.686,
+    "duration":56.134,
+    "exitcode":0,
+    "dagman_id":"28",
+    "parent_dagman_id":"",
+    "rescue_dag_number":0,
+    "jobs":4,
+    "jobs_failed":0,
+    "jobs_succeeded":4,
+    "dag_jobs":0,
+    "dag_jobs_failed":0,
+    "dag_jobs_succeeded":0,
+    "total_jobs":4,
+    "total_jobs_run":4,
+    "DagStatus":0
+}

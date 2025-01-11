@@ -1,0 +1,9 @@
+executable = /home/tanyongsheng_net/data/scripts/task1.py
+request_cpus = 1
+request_memory = 128MB
+request_disk = 128MB
+output = /home/tanyongsheng_net/data/output/task1.out
+error = /home/tanyongsheng_net/data/error/task1.err
+log = /home/tanyongsheng_net/data/log/task1.log
+
+queue

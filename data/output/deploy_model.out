@@ -1,0 +1,9 @@
+------------
+06-ml-pipeline-in-htcondor-executor.ipynb
+Task description: Deploy best model for production
+------------
+Model directory created or already exists: /home/tanyongsheng_net/data/model
+Loading metrics for trained models...
+Deployed model v1 based on higher precision.
+Copying trained_model_v1.pkl to the production model directory...
+Deployed model saved as 'deployed_model.pkl' in /home/tanyongsheng_net/data/model!

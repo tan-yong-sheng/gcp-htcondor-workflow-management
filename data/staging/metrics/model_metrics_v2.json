@@ -1,0 +1,7 @@
+{
+    "Model name": "Decision Tree",
+    "Accuracy": 0.9072384687526643,
+    "Precision": 0.6561443066516347,
+    "Recall": 0.7088915956151035,
+    "F1 Score": 0.6814988290398126
+}

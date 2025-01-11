@@ -1,0 +1,10 @@
+------------
+07-sequential-ml-pipeline-in-htcondor-executor.ipynb
+Task description: Predict with deployed model
+------------
+Loading the test data...
+Loading the deployed model...
+Model loaded successfully!
+Making predictions...
+Predictions: [0 0 0 ... 0 0 0]
+Task completed!
