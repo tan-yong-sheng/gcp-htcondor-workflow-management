@@ -13,7 +13,7 @@ If you're interested with our step-by-step setup guide, see here:
 - [Part 3 - Install Jupyter notebook on HTCondor Submit](setup_docs/Part%203%20-%20Install%20Jupyter%20notebook.md)
 - [Part 4 - Managing HTCondor Jobs](setup_docs/Part%204%20-%20%20Managing%20HTCondor%20Jobs.md)
 
-And here are the challenges we've met during the setup. Please feel free to read here: [Part%205%20-%20Challenges%20we%20have%20met.md](setup_docs/Part 5 - Challenges we have met.md)
+And here are the challenges we've met during the setup. Please feel free to read here: [Part 5 - Challenges we have met.md](setup_docs/Part%205%20-%20Challenges%20we%20have%20met.md)
 
 --------------------------------------------
 
