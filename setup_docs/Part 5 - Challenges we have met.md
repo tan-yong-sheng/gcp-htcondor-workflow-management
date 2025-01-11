@@ -1,5 +1,4 @@
 # Part 5 - Challenges we have met
-Challenges
 ----------
 
 1\. Shared NFS storage to be accessed by multiple HTCondor Executors
