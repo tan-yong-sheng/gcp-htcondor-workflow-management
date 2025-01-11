@@ -1,5 +1,4 @@
 # Part 1 - HTCondor's Installation
-Part 1: HTCondor Installation Guide
 -----------------------------------
 
 1.  Create 4 VMs in Google Cloud Platform with the following specifications:
