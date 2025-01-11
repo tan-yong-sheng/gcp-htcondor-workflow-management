@@ -1,5 +1,4 @@
-# Part 3 - Install Jupyter notebook on HTCondor
-Part 2: Jupyter Notebook Setup Guide (On HTCondor Submit Node)
+# Part 3 - Install Jupyter notebook (On HTCondor Submit Node)
 --------------------------------------------------------------
 
 Step 1: Install Jupyter Notebook
