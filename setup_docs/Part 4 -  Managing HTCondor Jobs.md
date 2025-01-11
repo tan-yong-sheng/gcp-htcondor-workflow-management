@@ -689,14 +689,19 @@ Some other submit files (`.sub`) will also be created as follows:
 
 ![](/images/12_Part%204%20-%20%20Managing%20HTCondor%20Jo.png)
 
-```text-plain
+
+To initiate the tasks, run the follows:
+
+```bash
 > cd ~/data/dags
 > condor_submit_dag -f dagfile.dag
 ```
 
 ![](/images/15_Part%204%20-%20%20Managing%20HTCondor%20Jo.png)
 
-```text-plain
+To monitor the condor queue's task, run the follows:
+
+```bash
 > watch -n 1 condor_q
 ```
 
