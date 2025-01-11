@@ -1,5 +1,4 @@
 # Part 4 -  Managing HTCondor Jobs via Jupyter notebook
-Part 4: Managing HTCondor Jobs via Jupyter notebook
 ---------------------------------------------------
 
 Pre-requisites
