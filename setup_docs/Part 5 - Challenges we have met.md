@@ -35,6 +35,8 @@ args = parser.parse_args()
 <.... PYTHON SCRPIT TO TRAIN MODEL HERE WHICH UTILIZE THE HYPERPARAMETERS ABOVE ....>
 ```
 
+We'll be using queue to loop the arguments row by row to train a single model with different hyperparameters (= hyperparameter tuning):
+
 - File location: `/home/tanyongsheng_net/data/scripts/hyperparameter_tuning.sub`
 ```
 executable = /home/tanyongsheng_net/data/scripts/hyperparameter_tuning.py
