@@ -60,19 +60,6 @@ Step 1: Configure NFS Server (in HTCondor Submit Node)
 > sudo chmod 777 /home/tanyongsheng_net
 ```
 
-*   Change permission access to Condor group
-
-```bash
-> sudo mkdir /home/nobody
-> sudo chown nobody:nogroup /home/nobody/
-> sudo chmod 777 /home/nobody/
-
-> sudo chown tanyongsheng_net:condor /home/tanyongsheng_net
-> sudo chown tanyongsheng_net:condor /home/tanyongsheng_net/data
-> sudo chmod 777 /home/tanyongsheng_net
-> sudo chmod 777 /home/tanyongsheng_net/data
-```
-
 *   Test if this works for `Condor` group to create and write the file
 
 ```bash
@@ -90,7 +77,7 @@ Step 1: Configure NFS Server (in HTCondor Submit Node)
 > sudo apt install nfs-common
 ```
 
-*   Edit hosts file:
+2\. Edit hosts file:
 
 ```bash
 > sudo nano /etc/hosts
@@ -98,13 +85,32 @@ Step 1: Configure NFS Server (in HTCondor Submit Node)
 
 ![](/images/16_Part%202%20-%20Install%20NFS%20File%20Syst.png)
 
+3. Create folder directory:
+ 
 ```bash
 > sudo mkdir -p /home/tanyongsheng_net/data
 ```
 
 ![](/images/10_Part%202%20-%20Install%20NFS%20File%20Syst.png)
 
-```text-plain
+
+4\. Set up permissions:
+
+```bash
+> sudo mkdir /home/nobody
+> sudo chown nobody:nogroup /home/nobody/
+> sudo chmod 777 /home/nobody/
+
+> sudo chown tanyongsheng_net:condor /home/tanyongsheng_net
+> sudo chown tanyongsheng_net:condor /home/tanyongsheng_net/data
+> sudo chmod 777 /home/tanyongsheng_net
+
+> sudo usermod -aG tanyongsheng_net condor
+```
+
+5. Mount the NFS file system on Condor Executors
+
+```bash
 > sudo mount CondorSubmit:home/tanyongsheng_net/data /home/tanyongsheng_net/data/
 ```
 
@@ -124,12 +130,3 @@ CondorSubmit:home/tanyongsheng_net/data /home/tanyongsheng_net/data nfs rsize=81
 
 ![](/images/14_Part%202%20-%20Install%20NFS%20File%20Syst.png)
 
-*   Make sure your HTCondor's Executor have required permission to access the file in NFS filesystem
-
-Try 
-
-```bash
-> sudo usermod -aG tanyongsheng_net condor
-```
-
-![](/images/19_Part%202%20-%20Install%20NFS%20File%20Syst.png)
