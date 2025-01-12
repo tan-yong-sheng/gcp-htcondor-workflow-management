@@ -19,9 +19,7 @@
 
 Perhaps we need to manually code the hyperparameters tuning by training multiple models at the same time with different arguments. Some examples are here: https://chtc.cs.wisc.edu/uw-research-computing/htc-passing-arguments-multiple and https://osg-htc.org/user-school-2022/materials/htcondor/files/osgus22-htc-htcondor-PART2.pdf
 
-Based on our above references, our thought is that maybe we can try to manually create hyperparameter tuning by adjusting our Python script for modeling as below, but haven't tried yet.
-
-Let's say we're doing hyperparameter tuning manually by passing multiple
+Based on our above references, our thought is that maybe we can try to manually create hyperparameter tuning by adjusting our Python script for modeling as below, but haven't tried yet. For example,
 
 - File location: `/home/tanyongsheng_net/data/scripts/hyperparameter_tuning.py`
 ```python
