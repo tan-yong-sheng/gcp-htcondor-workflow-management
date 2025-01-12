@@ -1,7 +1,7 @@
 # Part 5 - Challenges we have met
 ----------
 
-1\. Shared NFS storage to be accessed by multiple HTCondor Executors
+1\. Efforts to set up Shared NFS storage to be accessed by HTCondor Submits and multiple HTCondor Executors
 
 ![](/images/Part%205%20-%20Challenges%20%20we%20have%20me.png)
 
