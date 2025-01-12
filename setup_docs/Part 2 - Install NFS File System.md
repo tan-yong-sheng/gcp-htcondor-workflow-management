@@ -1,8 +1,7 @@
 # Part 2 - Install NFS File System
 -----------------------------------
 
-Step 1: Configure NFS Server (in HTCondor Submit Node)
-------------------------------------------------------
+## Step 1: Configure NFS Server (in HTCondor Submit Node)
 
 1\. Install NFS server packages:
 
@@ -116,7 +115,7 @@ Step 1: Configure NFS Server (in HTCondor Submit Node)
 
 ![](/images/13_Part%202%20-%20Install%20NFS%20File%20Syst.png)
 
-### Bonus tips: Auto-mounting for HTCondor Executor
+## Step 2: Auto-mounting for HTCondor Executor
 
 An alternate way to mount an NFS share in HTCondor Executor is to add a line to the `/etc/fstab` file. The line must state the hostname of the NFS server, the directory on the server being exported, and the directory on the local machine where the NFS share is to be mounted.
 
