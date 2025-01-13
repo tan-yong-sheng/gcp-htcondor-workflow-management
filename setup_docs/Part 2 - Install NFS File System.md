@@ -56,10 +56,11 @@
 
 > sudo chown tanyongsheng_net:condor /home/tanyongsheng_net
 > sudo chown tanyongsheng_net:condor /home/tanyongsheng_net/data
-> sudo chmod 777 /home/tanyongsheng_net
-> sudo chmod 777 /home/tanyongsheng_net/data
 
 > sudo usermod -aG tanyongsheng_net condor
+
+> sudo chmod 777 /home/tanyongsheng_net
+> sudo chmod 777 /home/tanyongsheng_net/data
 ```
 
 *   Test if this works for `Condor` group to create and write the file
@@ -103,12 +104,12 @@
 > sudo chown nobody:nogroup /home/nobody/
 > sudo chmod 777 /home/nobody/
 
+> sudo usermod -aG tanyongsheng_net condor
+
 > sudo chown tanyongsheng_net:condor /home/tanyongsheng_net
 > sudo chown tanyongsheng_net:condor /home/tanyongsheng_net/data
 > sudo chmod 777 /home/tanyongsheng_net
 > sudo chmod 777 /home/tanyongsheng_net/data
-
-> sudo usermod -aG tanyongsheng_net condor
 ```
 
 5. Mount the NFS file system on Condor Executors
