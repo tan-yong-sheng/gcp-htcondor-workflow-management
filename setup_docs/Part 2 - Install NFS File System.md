@@ -57,6 +57,9 @@
 > sudo chown tanyongsheng_net:condor /home/tanyongsheng_net
 > sudo chown tanyongsheng_net:condor /home/tanyongsheng_net/data
 > sudo chmod 777 /home/tanyongsheng_net
+> sudo chmod 777 /home/tanyongsheng_net/data
+
+> sudo usermod -aG tanyongsheng_net condor
 ```
 
 *   Test if this works for `Condor` group to create and write the file
@@ -103,6 +106,7 @@
 > sudo chown tanyongsheng_net:condor /home/tanyongsheng_net
 > sudo chown tanyongsheng_net:condor /home/tanyongsheng_net/data
 > sudo chmod 777 /home/tanyongsheng_net
+> sudo chmod 777 /home/tanyongsheng_net/data
 
 > sudo usermod -aG tanyongsheng_net condor
 ```
