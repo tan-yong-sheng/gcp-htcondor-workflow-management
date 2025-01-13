@@ -9,7 +9,7 @@
 
 2\. Using Universe runtime with HTCondor requires `sudo pip install` for Python libraries, which is undesirable due to its modification of the system. While Docker is a preferred option, insufficient documentation hinders its adoption.
 
-3\. HTCondor jobs can become stuck in the 'Idle' state indefinitely due to resource allocation errors, like requesting 100GB of disk space when it's not available. Critically, no error message is generated, obscuring the cause of the problem.
+3\. HTCondor jobs can become stuck in the 'Idle' state indefinitely due to resource allocation errors, like requesting 100GB of disk space when it's not available. Critically, no clear error message is generated, make it hard to debug the cause of the problem.
 
 ![](/images/2_Part%205%20-%20Challenges%20we%20have%20me.png)
 
