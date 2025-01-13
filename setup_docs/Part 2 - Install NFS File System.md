@@ -54,10 +54,10 @@
 > sudo chown nobody:nogroup /home/nobody/
 > sudo chmod 777 /home/nobody/
 
+> sudo usermod -aG tanyongsheng_net condor
+
 > sudo chown tanyongsheng_net:condor /home/tanyongsheng_net
 > sudo chown tanyongsheng_net:condor /home/tanyongsheng_net/data
-
-> sudo usermod -aG tanyongsheng_net condor
 
 > sudo chmod 777 /home/tanyongsheng_net
 > sudo chmod 777 /home/tanyongsheng_net/data
