@@ -5,7 +5,7 @@ Our final output is [06-ml-pipeline-in-htcondor-executor.ipynb](06-ml-pipeline-i
 - [02-running-sklearn-in-condor-executor.ipynb](02-running-sklearn-in-condor-executor.ipynb): Trial to execute Python script with Python libraries like `pandas` and `sklearn` in HTCondor Executor
 - [03-running-sklearn-with-docker-in-condor-executor.ipynb](03-running-sklearn-with-docker-in-condor-executor.ipynb): Initiative to explore Docker runtime for HTCondor jobs, we're not using this in the final as still stuck with the access to the NFS filesystem if using this method. See more info at [./setup_docs/Extra/Docker Runtime Setup Guide on.md](./setup_docs/Extra/Docker%20Runtime%20Setup%20Guide%20on.md)
 - [04-create-dag-file-via-python.ipynb](04-create-dag-file-via-python.ipynb): Trial to create DAG file via Python library: `htcondor.dags` API
-- [05-loading-csv-from-nfs-in-htcondor-executor.ipynb](05-loading-csv-from-nfs-in-htcondor-executor.ipynb): Trial to read and write CSV in HTCondor Executor
+- [05-loading-csv-from-nfs-in-htcondor-executor.ipynb](05-loading-csv-from-nfs-in-htcondor-executor.ipynb): Trial to read and write CSV in HTCondor Executor from shared NFS folder
 
 If you're interested with our step-by-step setup guide, see here:
 - [Part 1 - HTCondor's Installation](setup_docs/Part%201%20-%20HTCondor's%20Installation.md)
