@@ -22,7 +22,7 @@ We may need to manually implement hyperparameter tuning by training multiple mod
 - [Submitting Multiple Jobs With
 HTCondor](https://osg-htc.org/user-school-2022/materials/htcondor/files/osgus22-htc-htcondor-PART2.pdf)
 
-Based on these resources, our idea is to create a script that handles hyperparameter tuning by customizing the Python code for modeling. Here’s an example (not yet tested):
+Based on these resources, our idea is to create a script that handles hyperparameter tuning by customizing the Python code to accept input arguments (or parameters) for modeling. Here’s an example (not yet tested):
 
 - File location: `/home/tanyongsheng_net/data/scripts/hyperparameter_tuning.py`
 ```python
