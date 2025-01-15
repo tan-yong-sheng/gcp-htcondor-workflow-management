@@ -49,19 +49,21 @@
 
 6\. Set up permissions:
 
-> WARNING: I personally did run chmod 777 for /home/tanyongsheng_net before, and it cause VMs cannot be SSH but only can be accessed via serial ports in GCP. So, I amend it to 770, but I'm not yet verify if this could work.
+> WARNING: I personally did run chmod 777 for /home/tanyongsheng_net before, and it cause VMs cannot be SSH but only can be accessed via serial ports in GCP.
 
 ```bash
 > sudo mkdir /home/nobody
 > sudo chown nobody:nogroup /home/nobody/
 > sudo chmod 777 /home/nobody/
 
-> sudo usermod -aG tanyongsheng_net condor
+# please don't execute this as it will cause your VMs cannot be ssh for access
 
-> sudo chown tanyongsheng_net:condor /home/tanyongsheng_net
-> sudo chown tanyongsheng_net:condor /home/tanyongsheng_net/data
-> sudo chmod -R 770 /home/tanyongsheng_net
-> sudo chmod -R 770 /home/tanyongsheng_net/data
+# > sudo usermod -aG tanyongsheng_net condor
+
+# > sudo chown tanyongsheng_net:condor /home/tanyongsheng_net
+# > sudo chown tanyongsheng_net:condor /home/tanyongsheng_net/data
+# > sudo chmod -R 770 /home/tanyongsheng_net
+# > sudo chmod -R 770 /home/tanyongsheng_net/data
 
 ```
 
@@ -101,19 +103,20 @@
 
 4\. Set up permissions:
 
-> WARNING: I personally did run chmod 777 for /home/tanyongsheng_net before, and it cause VMs cannot be SSH but only can be accessed via serial ports in GCP. So, I amend it to 770, but I'm not yet verify if this could work.
+> WARNING: I personally did run chmod 777 for /home/tanyongsheng_net before, and it cause VMs cannot be SSH but only can be accessed via serial ports in GCP. 
 
 ```bash
 > sudo mkdir /home/nobody
 > sudo chown nobody:nogroup /home/nobody/
 > sudo chmod 777 /home/nobody/
 
-> sudo usermod -aG tanyongsheng_net condor
+# please don't execute this as it will cause your VMs cannot be ssh for access
+# > sudo usermod -aG tanyongsheng_net condor
 
-> sudo chown tanyongsheng_net:condor /home/tanyongsheng_net
-> sudo chown tanyongsheng_net:condor /home/tanyongsheng_net/data
-> sudo chmod -R 770 /home/tanyongsheng_net
-> sudo chmod -R 770 /home/tanyongsheng_net/data
+# > sudo chown tanyongsheng_net:condor /home/tanyongsheng_net
+# > sudo chown tanyongsheng_net:condor /home/tanyongsheng_net/data
+# > sudo chmod -R 770 /home/tanyongsheng_net
+# > sudo chmod -R 770 /home/tanyongsheng_net/data
 
 ```
 
