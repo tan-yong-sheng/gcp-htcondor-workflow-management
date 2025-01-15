@@ -49,7 +49,7 @@
 
 6\. Set up permissions:
 
-> WARNING: I personally did run chmod 777 for /home/tanyongsheng_net before, and it cause VMs cannot be SSH but only can be accessed via serial ports in GCP. I am thinking to change the nfs to directory to /mnt/nfs and update that folder's permission via `chmod -R 777 /mnt` since we can't apply this very permissive rule to home directory.
+> WARNING: I personally did run chmod 777 for /home/tanyongsheng_net before, and it cause VMs cannot be SSH but only can be accessed via serial ports in GCP. I am thinking to change the nfs directory to /mnt/nfs and update that folder's permission via `chmod -R 777 /mnt` since we can't apply this very permissive rule to home directory.
 
 ```bash
 > sudo mkdir /home/nobody
