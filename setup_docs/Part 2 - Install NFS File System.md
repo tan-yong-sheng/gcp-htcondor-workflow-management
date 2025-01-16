@@ -56,7 +56,7 @@
 > sudo chown nobody:nogroup /home/nobody/
 > sudo chmod 777 /home/nobody/
 
-# please don't execute this to update the home directory's permission to very permissive as it will cause your VMs cannot be ssh for access, If you insist to do so in GCP like me, you may have to use Serial Port to login your VMs, as you can't ssh the VMs anymore.
+# please don't execute this to update the home directory's permission to very permissive as it will cause your VMs cannot be ssh for access, If you insist to do so in GCP like me, you may have to use Serial Port to login your VMs, as you can't ssh the VMs anymore. Alternative way to is change to use /mnt folder as your shared NFS directory (instead of home directory), and make that /mnt folder very permissive via `chmod -R 777`, but I personally haven't tried that yet.
 
 # > sudo usermod -aG tanyongsheng_net condor
 
@@ -110,7 +110,7 @@
 > sudo chown nobody:nogroup /home/nobody/
 > sudo chmod 777 /home/nobody/
 
-# please don't execute this to update the home directory's permission to very permissive as it will cause your VMs cannot be ssh for access, If you insist to do so in GCP like me, you may have to use Serial Port to login your VMs, as you can't ssh the VMs anymore.
+# please don't execute this to update the home directory's permission to very permissive as it will cause your VMs cannot be ssh for access, If you insist to do so in GCP like me, you may have to use Serial Port to login your VMs, as you can't ssh the VMs anymore. Alternative way to is change to use /mnt folder as your shared NFS directory (instead of home directory), and make that /mnt folder very permissive via `chmod -R 777`, but I personally haven't tried that yet.
 
 # > sudo usermod -aG tanyongsheng_net condor
 
