@@ -3,7 +3,6 @@
 ### Project Background
 Our team is training a loan prediction model to classify which customer has a risk of default. Because the data might be growing large in the future, our team is preparing to move the machine learning training task to a distributed environment.
 
-
 ### Introduction to our Project Architecture
 To manage the training of our loan prediction machine learning model, we've implemented a workflow using HTCondor. Before delving into our machine learning workflow, let's first examine the architecture of HTCondor itself.
 
@@ -16,7 +15,6 @@ Shared Storage (NFS): All nodes in our HTCondor setup access shared data using N
 Such a setup easily allows collaboration between submission, execution, and management components while maintaining shared-resource integrity. This architecture is particularly well-suited for very scalable computational tasks that require distributed resource utilization. The employment of Jupyter Notebooks on the submission node provides an intuitive, interactive interface to the system, which is ideal for both research and production environments.
 
 ![image](https://github.com/user-attachments/assets/0e017405-51c4-410a-a77c-01dab7ae0542)
-
 
 ### Machine Learning Workflow Managment via HTCondor
 
