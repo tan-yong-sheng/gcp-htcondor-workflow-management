@@ -37,8 +37,6 @@ If you're interested with our step-by-step setup guide, see here:
 
 And here are the challenges we've met during the setup. Please feel free to read here: [Part 5 - Challenges we have met](setup_docs/Part%205%20-%20Challenges%20we%20have%20met.md)
 
---------------------------------------------
-
 So, back to our topic:
 
 ![image](https://github.com/user-attachments/assets/b69c43e1-e780-499b-9258-4d3658b8958d)
