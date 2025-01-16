@@ -37,15 +37,13 @@ And here are the challenges we've met during the setup. Please feel free to read
 
 So, back to our topic:
 
-- Below is the machine learning workflow we're running via HTCondor ecosystem:
-
 ![image](https://github.com/user-attachments/assets/b69c43e1-e780-499b-9258-4d3658b8958d)
 
-The workflow for loan prediction in HTCondor includes the following essential steps:
+The workflow for training machine learning model for loan prediction in HTCondor, shown in the figure above, includes the following essential steps:
 
-- Data Input & Preprocessing: NFS stores unprocessed loan data (CSV). Several compute nodes are coordinated by HTCondor to retrieve this data, perform preprocessing (one-hot encoding, feature engineering, cleaning, and handling missing values), and then save the processed data back to NFS.
-- Data Partition: The task of splitting the produced data into training (80%) and testing (20%) groups is assigned to HTCondor. Executor Nodes perform the split, retrieve the preprocessed data, and save the processed data in NFS.
-- Training Models in a Distributed Manner: One of the Executor nodes will be assigned by HTCondor for Logistic Regression model training. While another Executor node will be assigned by HTCondor for Decision Tree’s training.
-- Evaluating Models in a Distributed Manner: Several nodes use the test data to evaluate the trained logistic regression and decision tree models. Metrics like accuracy and recall are evaluated, and the results are aggregated to provide a comprehensive assessment.
-- Model Deployment: The highest-performing model, according to evaluation metrics, is saved to the shared NFS folder and thus could be implemented across all nodes.
-- Loan Forecasting: Using the developed model, new loan data can be examined across several Executor nodes in order to make predictions.
+- **Data Input & Preprocessing**: NFS stores unprocessed loan data (CSV). Several compute nodes are coordinated by HTCondor to retrieve this data, perform preprocessing (one-hot encoding, feature engineering, cleaning, and handling missing values), and then save the processed data back to NFS.
+- **Data Partition**: The task of splitting the produced data into training (80%) and testing (20%) groups is assigned to HTCondor. Executor Nodes perform the split, retrieve the preprocessed data, and save the processed data in NFS.
+- **Training Models in a Distributed Manner**: One of the Executor nodes will be assigned by HTCondor for Logistic Regression model training. While another Executor node will be assigned by HTCondor for Decision Tree’s training.
+- **Evaluating Models in a Distributed Manner**: Several nodes use the test data to evaluate the trained logistic regression and decision tree models. Metrics like accuracy and recall are evaluated, and the results are aggregated to provide a comprehensive assessment.
+- **Model Deployment**: The highest-performing model, according to evaluation metrics, is saved to the shared NFS folder and thus could be implemented across all nodes.
+- **Loan Forecasting**: Using the developed model, new loan data can be examined across several Executor nodes in order to make predictions.
