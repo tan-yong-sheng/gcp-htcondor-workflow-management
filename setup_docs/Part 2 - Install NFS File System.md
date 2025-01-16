@@ -56,14 +56,14 @@
 > sudo chown nobody:nogroup /home/nobody/
 > sudo chmod 777 /home/nobody/
 
-# please don't execute this as it will cause your VMs cannot be ssh for access
+# please don't execute this to update the home directory's permission to very permissive as it will cause your VMs cannot be ssh for access, If you insist to do so in GCP like me, you may have to use Serial Port to login your VMs, as you can't ssh the VMs anymore.
 
 # > sudo usermod -aG tanyongsheng_net condor
 
 # > sudo chown tanyongsheng_net:condor /home/tanyongsheng_net
 # > sudo chown tanyongsheng_net:condor /home/tanyongsheng_net/data
-# > sudo chmod -R 770 /home/tanyongsheng_net
-# > sudo chmod -R 770 /home/tanyongsheng_net/data
+# > sudo chmod -R 777 /home/tanyongsheng_net
+# > sudo chmod -R 77 7/home/tanyongsheng_net/data
 
 ```
 
@@ -110,7 +110,8 @@
 > sudo chown nobody:nogroup /home/nobody/
 > sudo chmod 777 /home/nobody/
 
-# please don't execute this as it will cause your VMs cannot be ssh for access
+# please don't execute this to update the home directory's permission to very permissive as it will cause your VMs cannot be ssh for access, If you insist to do so in GCP like me, you may have to use Serial Port to login your VMs, as you can't ssh the VMs anymore.
+
 # > sudo usermod -aG tanyongsheng_net condor
 
 # > sudo chown tanyongsheng_net:condor /home/tanyongsheng_net
