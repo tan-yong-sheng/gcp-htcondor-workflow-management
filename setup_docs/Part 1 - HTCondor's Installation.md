@@ -110,7 +110,7 @@ Source: [HTCondor's admin guide](https://htcondor.readthedocs.io/en/latest/getti
  > sudo systemctl status condor
 ```
 
-![](9_Part 1%20-%20HTCondor's%20Installati.jpg)
+![](9_Part%201%20-%20HTCondor's%20Installati.jpg)
 
 ### Step 3: Set up Executor Nodes (VM3 and VM4)
 
