@@ -69,10 +69,11 @@
 
 ```
 
-*   Test if this works for `Condor` group to create and write the file in NFS directory
+*   Test if this works for `Condor` user or `nobody` user to create and write the file in NFS directory
 
 ```bash
 > sudo -u condor touch /home/tanyongsheng_net/data/testfile.txt
+> sudo -u nobody touch /home/tanyongsheng_net/data/testfile2.txt
 ```
 
 ![](/images/17_Part%202%20-%20Install%20NFS%20File%20Syst.png)
