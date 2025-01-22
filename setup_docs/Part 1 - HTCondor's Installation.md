@@ -136,7 +136,7 @@ Repeat these steps for both executor VMs:
 10.128.0.2 CondorHost
 ```
 
-![](2_Part 1%20-%20HTCondor's%20Installati.png)
+![](2_Part%201%20-%20HTCondor's%20Installati.png)
 
 5\. Install HTCondor Executor:
 
