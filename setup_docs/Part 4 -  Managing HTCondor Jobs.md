@@ -336,7 +336,7 @@ print(f"Metrics saved at {metrics_dir}!")
 !chmod 764 ./data/scripts/evaluate_model_v1.py
 ```
 
-### Step 6: Evaluate trained model for Decision Model
+### Step 6: Evaluate trained model for Decision Tree
 
 *   We're using Jupyter notebook to create a Python file for evaluate our Decision Tree modeling with test data at `/home/tanyongsheng_net/data/scripts/evaluate_model_v2.py`
 
