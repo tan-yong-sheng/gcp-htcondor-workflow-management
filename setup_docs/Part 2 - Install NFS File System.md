@@ -126,5 +126,5 @@ The general syntax for the line in `/etc/fstab` file is as follows:
 CondorSubmit:mnt/nfs /mnt/nfs nfs rsize=8192,wsize=8192,timeo=14,intr
 ```
 
-![](/images/14_Part%202%20-%20Install%20NFS%20File%20Syst.png)
+![image](https://github.com/user-attachments/assets/31fd3f73-e20d-4d75-af1e-843e23e314f1)
 
