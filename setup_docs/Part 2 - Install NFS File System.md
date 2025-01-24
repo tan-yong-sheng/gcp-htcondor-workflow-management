@@ -17,7 +17,7 @@
 2\. Create the shared directory:
 
 ```bash
-> sudo mkdir -p /home/tanyongsheng_net/data
+> sudo mkdir -p /mnt/nfs
 ```
 
 3\. Configure NFS exports:
@@ -29,10 +29,9 @@
 *   Add this line to `/etc/exports` file:
 
 ```text-plain
-/home/tanyongsheng_net/data *(rw,sync,no_subtree_check,no_root_squash)
+/mnt/nfs *(rw,sync,no_subtree_check,no_root_squash)
 ```
-
-![](/images/15_Part%202%20-%20Install%20NFS%20File%20Syst.png)
+![image](https://github.com/user-attachments/assets/aa0f9e10-f1c6-4199-9eb4-042964842a21)
 
 4\. Apply the NFS configuration:
 
@@ -40,7 +39,8 @@
 > sudo exportfs -a
 ```
 
-![](/images/1_Part%202%20-%20Install%20NFS%20File%20Syst.jpg)
+![image](https://github.com/user-attachments/assets/ff0f185b-3c5c-4419-9353-e3919e73b5fb)
+
 
 5\. Restart NFS service:
 
@@ -49,34 +49,20 @@
 > sudo systemctl status nfs-kernel-server
 ```
 
+![image](https://github.com/user-attachments/assets/b243762c-74fd-4a57-8e79-67d763ea1698)
+
 6\. Set up permissions:
 
-> WARNING: I personally did run chmod 777 for /home/tanyongsheng_net before, and it cause VMs cannot be SSH but only can be accessed via serial ports in GCP. I am thinking to change the nfs directory to /mnt/nfs and update that folder's permission via `chmod -R 777 /mnt` since we can't apply this very permissive rule to home directory.
-
 ```bash
-> sudo mkdir /home/nobody
-> sudo chown nobody:nogroup /home/nobody/
-> sudo chmod 777 /home/nobody/
-
-# please don't execute this to update the home directory's permission to very permissive as it will cause your VMs cannot be ssh for access, If you insist to do so in GCP like me, you may have to use Serial Port to login your VMs, as you can't ssh the VMs anymore. Alternative way to is change to use /mnt folder as your shared NFS directory (instead of home directory), and make that /mnt folder very permissive via `chmod -R 777`, but I personally haven't tried that yet.
-
-# > sudo usermod -aG tanyongsheng_net condor
-
-# > sudo chown tanyongsheng_net:condor /home/tanyongsheng_net
-# > sudo chown tanyongsheng_net:condor /home/tanyongsheng_net/data
-# > sudo chmod -R 777 /home/tanyongsheng_net
-# > sudo chmod -R 77 7/home/tanyongsheng_net/data
-
+> sudo chmod -R 777 /mnt
 ```
 
 *   Test if this works for `Condor` user or `nobody` user to create and write the file in NFS directory
 
 ```bash
-> sudo -u condor touch /home/tanyongsheng_net/data/testfile.txt
-> sudo -u nobody touch /home/tanyongsheng_net/data/testfile2.txt
+> sudo -u condor touch /mnt/nfs/testfile.txt
+> sudo -u nobody touch /mnt/nfs/testfile2.txt
 ```
-
-![](/images/17_Part%202%20-%20Install%20NFS%20File%20Syst.png)
 
 ### Step 2: Configure NFS Common (in HTCondor Executor Nodes)
 
@@ -98,7 +84,7 @@
 3. Create folder directory:
  
 ```bash
-> sudo mkdir -p /home/tanyongsheng_net/data
+> sudo mkdir -p /mnt/nfs
 ```
 
 ![](/images/10_Part%202%20-%20Install%20NFS%20File%20Syst.png)
@@ -106,38 +92,27 @@
 
 4\. Set up permissions:
 
-> WARNING: I personally did run chmod 777 for /home/tanyongsheng_net before, and it cause VMs cannot be SSH but only can be accessed via serial ports in GCP. 
-
 ```bash
 > sudo mkdir /home/nobody
 > sudo chown nobody:nogroup /home/nobody/
 > sudo chmod 777 /home/nobody/
 
-# please don't execute this to update the home directory's permission to very permissive as it will cause your VMs cannot be ssh for access, If you insist to do so in GCP like me, you may have to use Serial Port to login your VMs, as you can't ssh the VMs anymore. Alternative way to is change to use /mnt folder as your shared NFS directory (instead of home directory), and make that /mnt folder very permissive via `chmod -R 777`, but I personally haven't tried that yet.
-
-# > sudo usermod -aG tanyongsheng_net condor
-
-# > sudo chown tanyongsheng_net:condor /home/tanyongsheng_net
-# > sudo chown tanyongsheng_net:condor /home/tanyongsheng_net/data
-# > sudo chmod -R 770 /home/tanyongsheng_net
-# > sudo chmod -R 770 /home/tanyongsheng_net/data
-
+> sudo chmod -R 777 /mnt
 ```
 
 *   Test if this works for `Condor` group to create and write the file in NFS directory
 
 ```bash
-> sudo -u condor touch /home/tanyongsheng_net/data/testfile.txt
+> sudo -u condor touch /mnt/nfs/testfile.txt
+> sudo -u nobody touch /mnt/nfs/testfile2.txt
 ```
 
 
 5. Mount the NFS file system on Condor Executors
 
 ```bash
-> sudo mount CondorSubmit:home/tanyongsheng_net/data /home/tanyongsheng_net/data/
+> sudo mount CondorSubmit:mnt/nfs /mnt/nfs
 ```
-
-![](/images/13_Part%202%20-%20Install%20NFS%20File%20Syst.png)
 
 ## Step 2: Auto-mounting for HTCondor Executor
 
@@ -148,7 +123,7 @@ The general syntax for the line in `/etc/fstab` file is as follows:
 *   File location: `/etc/fstab`
 
 ```text-plain
-CondorSubmit:home/tanyongsheng_net/data /home/tanyongsheng_net/data nfs rsize=8192,wsize=8192,timeo=14,intr
+CondorSubmit:mnt/nfs /mnt/nfs nfs rsize=8192,wsize=8192,timeo=14,intr
 ```
 
 ![](/images/14_Part%202%20-%20Install%20NFS%20File%20Syst.png)
