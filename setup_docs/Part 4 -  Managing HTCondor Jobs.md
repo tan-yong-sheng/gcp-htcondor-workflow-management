@@ -31,7 +31,7 @@ Part 1: Create Python executable files via Jupyter Notebook
 
 ### Step 1: Data Processing
 
-*   We're using Jupyter notebook to create a Python file for data processing at `/home/tanyongsheng_net/data/scripts/data_processing.py`
+*   We're using Jupyter notebook to create a Python file for data processing at `/mnt/nfs/scripts/data_processing.py`
 
 ```text-plain
 %%writefile ./data/scripts/data_processing.py
@@ -46,7 +46,7 @@ import os
 import pandas as pd
 from pathlib import Path
 
-base_dir = Path("/home/tanyongsheng_net/data")
+base_dir = Path("/mnt/nfs")
 staging_dir = base_dir / "staging"
 split_data_dir = staging_dir / "split_data"
 CSV_file = base_dir / "loan_data.csv"
@@ -78,7 +78,7 @@ print("Saving processed data to NFS disk...")
 data.to_csv(split_data_dir / "processed_data.csv")
 ```
 
-*   Also, make sure the python script: `/home/tanyongsheng_net/data/scripts/data_processing.py` is executable.
+*   Also, make sure the python script: `/mnt/nfs/scripts/data_processing.py` is executable.
 
 ```text-plain
 # make sure the python script is executable
@@ -91,7 +91,7 @@ data.to_csv(split_data_dir / "processed_data.csv")
 
 ### Step 2: Train test split
 
-*   We're using Jupyter notebook to create a Python file for train test split at `/home/tanyongsheng_net/data/scripts/train_test_split_data.py`
+*   We're using Jupyter notebook to create a Python file for train test split at `/mnt/nfs/scripts/train_test_split_data.py`
 
 ```text-plain
 %%writefile ./data/scripts/train_test_split_data.py
@@ -107,7 +107,7 @@ import pandas as pd
 from pathlib import Path
 from sklearn.model_selection import train_test_split
 
-base_dir = Path("/home/tanyongsheng_net/data")
+base_dir = Path("/mnt/nfs")
 staging_dir = base_dir / "staging"
 split_data_dir = staging_dir / "split_data"
 
@@ -132,7 +132,7 @@ X_test.to_csv(split_data_dir / "X_test.csv", index=False)
 y_test.to_csv(split_data_dir / "y_test.csv", index=False)
 ```
 
-*   Also, make sure the python script: `/home/tanyongsheng_net/data/scripts/train_test_split_data.py` is executable.
+*   Also, make sure the python script: `/mnt/nfs/scripts/train_test_split_data.py` is executable.
 
 ```text-plain
 # make sure the python script is executable
@@ -141,7 +141,7 @@ y_test.to_csv(split_data_dir / "y_test.csv", index=False)
 
 ### Step 3: Modeling - Logistic Regression
 
-*   We're using Jupyter notebook to create a Python file for our Logistic Regression modeling at `/home/tanyongsheng_net/data/scripts/data_modeling_v1.py`
+*   We're using Jupyter notebook to create a Python file for our Logistic Regression modeling at `/mnt/nfs/scripts/data_modeling_v1.py`
 
 ```text-plain
 %%writefile ./data/scripts/data_modeling_v1.py
@@ -161,7 +161,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
 
-base_dir = Path("/home/tanyongsheng_net/data")
+base_dir = Path("/mnt/nfs")
 staging_dir = base_dir / "staging"
 split_data_dir = staging_dir / "split_data"
 staging_model_dir = staging_dir / "model"
@@ -189,7 +189,7 @@ print("Saving the trained model...")
 pickle.dump(pipe, open(staging_model_dir / 'trained_model_v1.pkl', 'wb'))
 ```
 
-*   Also, make sure the python script: `/home/tanyongsheng_net/data/scripts/data_modeling_v1.py` is executable.
+*   Also, make sure the python script: `/mnt/nfs/scripts/data_modeling_v1.py` is executable.
 
 ```text-plain
 # make sure the python script is executable
@@ -198,7 +198,7 @@ pickle.dump(pipe, open(staging_model_dir / 'trained_model_v1.pkl', 'wb'))
 
 ### Step 4: Modeling - Decision Tree
 
-*   We're using Jupyter notebook to create a Python file for our Decision Tree modeling at `/home/tanyongsheng_net/data/scripts/data_modeling_v2.py`
+*   We're using Jupyter notebook to create a Python file for our Decision Tree modeling at `/mnt/nfs/scripts/data_modeling_v2.py`
 
 ```text-plain
 %%writefile ./data/scripts/data_modeling_v2.py
@@ -216,7 +216,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.tree import DecisionTreeClassifier
 
-base_dir = Path("/home/tanyongsheng_net/data")
+base_dir = Path("/mnt/nfs")
 staging_dir = base_dir / "staging"
 split_data_dir = staging_dir / "split_data"
 staging_model_dir = staging_dir / "model"
@@ -245,7 +245,7 @@ print("Saving the model v2...")
 pickle.dump(pipe, open(staging_model_dir / 'trained_model_v2.pkl', 'wb'))
 ```
 
-*   Also, make sure the python script: `/home/tanyongsheng_net/data/scripts/data_modeling_v2.py` is executable.
+*   Also, make sure the python script: `/mnt/nfs/scripts/data_modeling_v2.py` is executable.
 
 ```text-plain
 # make sure the python script is executable
@@ -254,7 +254,7 @@ pickle.dump(pipe, open(staging_model_dir / 'trained_model_v2.pkl', 'wb'))
 
 ### Step 5: Evaluate trained model for Logistic Regression
 
-*   We're using Jupyter notebook to create a Python file for evaluate our Decision Tree modeling with test data at `/home/tanyongsheng_net/data/scripts/evaluate_model_v1.py`
+*   We're using Jupyter notebook to create a Python file for evaluate our Decision Tree modeling with test data at `/mnt/nfs/scripts/evaluate_model_v1.py`
 
 ```text-plain
 %%writefile ./data/scripts/evaluate_model_v1.py
@@ -274,7 +274,7 @@ from sklearn.metrics import (accuracy_score,
                             recall_score, 
                             f1_score)
 
-base_dir = Path("/home/tanyongsheng_net/data")
+base_dir = Path("/mnt/nfs")
 staging_dir = base_dir / "staging"
 split_data_dir = staging_dir / "split_data"
 metrics_dir = staging_dir / "metrics"
@@ -330,7 +330,7 @@ with open(metrics_file, 'w') as f:
 print(f"Metrics saved at {metrics_dir}!")
 ```
 
-*   Also, make sure the python script: `/home/tanyongsheng_net/data/scripts/evaluate_model_v1.py` is executable.
+*   Also, make sure the python script: `/mnt/nfs/scripts/evaluate_model_v1.py` is executable.
 
 ```text-plain
 !chmod 764 ./data/scripts/evaluate_model_v1.py
@@ -338,7 +338,7 @@ print(f"Metrics saved at {metrics_dir}!")
 
 ### Step 6: Evaluate trained model for Decision Tree
 
-*   We're using Jupyter notebook to create a Python file for evaluate our Decision Tree modeling with test data at `/home/tanyongsheng_net/data/scripts/evaluate_model_v2.py`
+*   We're using Jupyter notebook to create a Python file for evaluate our Decision Tree modeling with test data at `/mnt/nfs/scripts/evaluate_model_v2.py`
 
 ```text-plain
 %%writefile ./data/scripts/evaluate_model_v2.py
@@ -359,7 +359,7 @@ from sklearn.metrics import (accuracy_score,
                             recall_score, 
                             f1_score)
 
-base_dir = Path("/home/tanyongsheng_net/data")
+base_dir = Path("/mnt/nfs")
 staging_dir = base_dir / "staging"
 split_data_dir = staging_dir / "split_data"
 metrics_dir = staging_dir / "metrics"
@@ -415,7 +415,7 @@ with open(metrics_file, 'w') as f:
 print(f"Metrics saved at {metrics_dir}!")
 ```
 
-*   Also, make sure the python script: `/home/tanyongsheng_net/data/scripts/evaluate_model_v2.py` is executable.
+*   Also, make sure the python script: `/mnt/nfs/scripts/evaluate_model_v2.py` is executable.
 
 ```text-plain
 !chmod 764 ./data/scripts/evaluate_model_v2.py
@@ -423,7 +423,7 @@ print(f"Metrics saved at {metrics_dir}!")
 
 ### Step 7: Deploy best model
 
-*   We're using Jupyter notebook to create a Python file to deploy the best model between Logistic Regression and Decision Tree model at `/home/tanyongsheng_net/data/scripts/deploy_model.py`.
+*   We're using Jupyter notebook to create a Python file to deploy the best model between Logistic Regression and Decision Tree model at `/mnt/nfs/scripts/deploy_model.py`.
 
 ```text-plain
 %%writefile ./data/scripts/deploy_model.py
@@ -439,7 +439,7 @@ import shutil
 import json
 from pathlib import Path
 
-base_dir = Path("/home/tanyongsheng_net/data")
+base_dir = Path("/mnt/nfs")
 staging_dir = base_dir / "staging" 
 model_dir = base_dir / "model"
 staging_model_dir = staging_dir / "model"
@@ -478,7 +478,7 @@ shutil.copy(staging_model_dir / model_to_deploy, model_dir / "deployed_model.pkl
 print(f"Deployed model saved as 'deployed_model.pkl' in {model_dir}!")
 ```
 
-*   Also, make sure the python script: `/home/tanyongsheng_net/data/scripts/deploy_model.py` is executable.
+*   Also, make sure the python script: `/mnt/nfs/scripts/deploy_model.py` is executable.
 
 ```text-plain
 !chmod 764 ./data/scripts/deploy_model.py
@@ -486,7 +486,7 @@ print(f"Deployed model saved as 'deployed_model.pkl' in {model_dir}!")
 
 ### Step 8: Predict with deployed model
 
-*   We're using Jupyter notebook to create a Python file to perform prediction via the best model at `/home/tanyongsheng_net/data/scripts/predict_model.py`
+*   We're using Jupyter notebook to create a Python file to perform prediction via the best model at `/mnt/nfs/scripts/predict_model.py`
 
 ```text-plain
 %%writefile ./data/scripts/predict_model.py
@@ -501,7 +501,7 @@ import pickle
 import pandas as pd
 from pathlib import Path
 
-base_dir = Path("/home/tanyongsheng_net/data")
+base_dir = Path("/mnt/nfs")
 model_dir = base_dir / "model"
 staging_dir = base_dir / "staging" 
 split_data_dir = staging_dir / "split_data"
@@ -529,7 +529,7 @@ print(f"Predictions: {y_pred}")
 print("Task completed!")
 ```
 
-*   Also, make sure the python script: `/home/tanyongsheng_net/data/scripts/predict_model.py` is executable.
+*   Also, make sure the python script: `/mnt/nfs/scripts/predict_model.py` is executable.
 
 ```text-plain
 !chmod 764 ./data/scripts/predict_model.py
@@ -547,7 +547,7 @@ from htcondor import dags
 from pathlib import Path
 import shutil
 
-base_dir = Path("/home/tanyongsheng_net/data")
+base_dir = Path("/mnt/nfs")
 
 # Function wrapper to create submit file
 def create_submit_file(task_name, request_cpus=1, request_memory="128MB", request_disk="128MB", **kwargs):
@@ -648,7 +648,7 @@ dag_file = dags.write_dag(dag, dag_dir)
 
 After executing the above scripts in Jupyter notebook, `dagfile.dag` will be created:
 
-*   File location: `/home/tanyongsheng_net/data/dags/dagfile.dag`
+*   File location: `/mnt/nfs/dags/dagfile.dag`
 
 ![](/images/4_Part%204%20-%20%20Managing%20HTCondor%20Jo.png)
 
@@ -656,35 +656,35 @@ Some other submit files (`.sub`) will also be created as follows:
 
 ![](/images/Part%204%20-%20%20Managing%20HTCondor%20Jo.jpg)
 
-*   File location: `/home/tanyongsheng_net/data/dags/data_processing.sub`
+*   File location: `/mnt/nfs/dags/data_processing.sub`
 
 ![](/images/5_Part%204%20-%20%20Managing%20HTCondor%20Jo.png)
 
-*   File location: `/home/tanyongsheng_net/data/dags/train_test_split.sub`
+*   File location: `/mnt/nfs/dags/train_test_split.sub`
 
 ![](/images/6_Part%204%20-%20%20Managing%20HTCondor%20Jo.png)
 
-*   File location: `/home/tanyongsheng_net/data/dags/modeling_v1.sub`
+*   File location: `/mnt/nfs/dags/modeling_v1.sub`
 
 ![](/images/7_Part%204%20-%20%20Managing%20HTCondor%20Jo.png)
 
-*   File location: `/home/tanyongsheng_net/data/dags/modeling_v2.sub`
+*   File location: `/mnt/nfs/dags/modeling_v2.sub`
 
 ![](/images/8_Part%204%20-%20%20Managing%20HTCondor%20Jo.png)
 
-*   File location: `/home/tanyongsheng_net/data/dags/evaluate_model_v1.sub`
+*   File location: `/mnt/nfs/dags/evaluate_model_v1.sub`
 
 ![](/images/9_Part%204%20-%20%20Managing%20HTCondor%20Jo.png)
 
-*   File location: `/home/tanyongsheng_net/data/dags/evaluate_model_v2.sub`
+*   File location: `/mnt/nfs/dags/evaluate_model_v2.sub`
 
 ![](/images/10_Part%204%20-%20%20Managing%20HTCondor%20Jo.png)
 
-*   File location: `/home/tanyongsheng_net/data/dags/deploy_best_model.sub`
+*   File location: `/mnt/nfs/dags/deploy_best_model.sub`
 
 ![](/images/11_Part%204%20-%20%20Managing%20HTCondor%20Jo.png)
 
-*   File location: `/home/tanyongsheng_net/data/dags/loan_prediction.sub`
+*   File location: `/mnt/nfs/dags/loan_prediction.sub`
 
 ![](/images/12_Part%204%20-%20%20Managing%20HTCondor%20Jo.png)
 
