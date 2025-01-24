@@ -34,7 +34,7 @@ Part 1: Create Python executable files via Jupyter Notebook
 *   We're using Jupyter notebook to create a Python file for data processing at `/mnt/nfs/scripts/data_processing.py`
 
 ```text-plain
-%%writefile ./data/scripts/data_processing.py
+%%writefile /mnt/nfs/scripts/data_processing.py
 #!/usr/bin/env python3
 print("------------")
 print("06-ml-pipeline-in-htcondor-executor.ipynb")
@@ -82,7 +82,7 @@ data.to_csv(split_data_dir / "processed_data.csv")
 
 ```text-plain
 # make sure the python script is executable
-!chmod 764 ./data/scripts/data_processing.py
+!chmod 764 /mnt/nfs/scripts/data_processing.py
 ```
 
 *   The sample for the above steps is as follows: 
@@ -94,7 +94,7 @@ data.to_csv(split_data_dir / "processed_data.csv")
 *   We're using Jupyter notebook to create a Python file for train test split at `/mnt/nfs/scripts/train_test_split_data.py`
 
 ```text-plain
-%%writefile ./data/scripts/train_test_split_data.py
+%%writefile /mnt/nfs/scripts/train_test_split_data.py
 #!/usr/bin/env python3
 print("------------")
 print("06-ml-pipeline-in-htcondor-executor.ipynb")
@@ -136,7 +136,7 @@ y_test.to_csv(split_data_dir / "y_test.csv", index=False)
 
 ```text-plain
 # make sure the python script is executable
-!chmod 764 ./data/scripts/train_test_split_data.py
+!chmod 764 /mnt/nfs/scripts/train_test_split_data.py
 ```
 
 ### Step 3: Modeling - Logistic Regression
@@ -144,7 +144,7 @@ y_test.to_csv(split_data_dir / "y_test.csv", index=False)
 *   We're using Jupyter notebook to create a Python file for our Logistic Regression modeling at `/mnt/nfs/scripts/data_modeling_v1.py`
 
 ```text-plain
-%%writefile ./data/scripts/data_modeling_v1.py
+%%writefile /mnt/nfs/scripts/data_modeling_v1.py
 #!/usr/bin/env python3
 print("------------")
 print("06-ml-pipeline-in-htcondor-executor.ipynb")
@@ -193,7 +193,7 @@ pickle.dump(pipe, open(staging_model_dir / 'trained_model_v1.pkl', 'wb'))
 
 ```text-plain
 # make sure the python script is executable
-!chmod 764 ./data/scripts/data_modeling_v1.py
+!chmod 764 /mnt/nfs/scripts/data_modeling_v1.py
 ```
 
 ### Step 4: Modeling - Decision Tree
@@ -201,7 +201,7 @@ pickle.dump(pipe, open(staging_model_dir / 'trained_model_v1.pkl', 'wb'))
 *   We're using Jupyter notebook to create a Python file for our Decision Tree modeling at `/mnt/nfs/scripts/data_modeling_v2.py`
 
 ```text-plain
-%%writefile ./data/scripts/data_modeling_v2.py
+%%writefile /mnt/nfs/scripts/data_modeling_v2.py
 #!/usr/bin/env python3
 print("------------")
 print("06-ml-pipeline-in-htcondor-executor.ipynb")
@@ -249,7 +249,7 @@ pickle.dump(pipe, open(staging_model_dir / 'trained_model_v2.pkl', 'wb'))
 
 ```text-plain
 # make sure the python script is executable
-!chmod 764 ./data/scripts/data_modeling_v2.py
+!chmod 764 /mnt/nfs/scripts/data_modeling_v2.py
 ```
 
 ### Step 5: Evaluate trained model for Logistic Regression
@@ -257,7 +257,7 @@ pickle.dump(pipe, open(staging_model_dir / 'trained_model_v2.pkl', 'wb'))
 *   We're using Jupyter notebook to create a Python file for evaluate our Decision Tree modeling with test data at `/mnt/nfs/scripts/evaluate_model_v1.py`
 
 ```text-plain
-%%writefile ./data/scripts/evaluate_model_v1.py
+%%writefile /mnt/nfs/scripts/evaluate_model_v1.py
 #!/usr/bin/env python3
 print("------------")
 print("06-ml-pipeline-in-htcondor-executor.ipynb")
@@ -333,7 +333,7 @@ print(f"Metrics saved at {metrics_dir}!")
 *   Also, make sure the python script: `/mnt/nfs/scripts/evaluate_model_v1.py` is executable.
 
 ```text-plain
-!chmod 764 ./data/scripts/evaluate_model_v1.py
+!chmod 764 /mnt/nfs/scripts/evaluate_model_v1.py
 ```
 
 ### Step 6: Evaluate trained model for Decision Tree
@@ -341,7 +341,7 @@ print(f"Metrics saved at {metrics_dir}!")
 *   We're using Jupyter notebook to create a Python file for evaluate our Decision Tree modeling with test data at `/mnt/nfs/scripts/evaluate_model_v2.py`
 
 ```text-plain
-%%writefile ./data/scripts/evaluate_model_v2.py
+%%writefile /mnt/nfs/scripts/evaluate_model_v2.py
 #!/usr/bin/env python3
 print("------------")
 print("06-ml-pipeline-in-htcondor-executor.ipynb")
@@ -418,7 +418,7 @@ print(f"Metrics saved at {metrics_dir}!")
 *   Also, make sure the python script: `/mnt/nfs/scripts/evaluate_model_v2.py` is executable.
 
 ```text-plain
-!chmod 764 ./data/scripts/evaluate_model_v2.py
+!chmod 764 /mnt/nfs/scripts/evaluate_model_v2.py
 ```
 
 ### Step 7: Deploy best model
@@ -426,7 +426,7 @@ print(f"Metrics saved at {metrics_dir}!")
 *   We're using Jupyter notebook to create a Python file to deploy the best model between Logistic Regression and Decision Tree model at `/mnt/nfs/scripts/deploy_model.py`.
 
 ```text-plain
-%%writefile ./data/scripts/deploy_model.py
+%%writefile /mnt/nfs/scripts/deploy_model.py
 #!/usr/bin/env python3
 print("------------")
 print("06-ml-pipeline-in-htcondor-executor.ipynb")
@@ -481,7 +481,7 @@ print(f"Deployed model saved as 'deployed_model.pkl' in {model_dir}!")
 *   Also, make sure the python script: `/mnt/nfs/scripts/deploy_model.py` is executable.
 
 ```text-plain
-!chmod 764 ./data/scripts/deploy_model.py
+!chmod 764 /mnt/nfs/scripts/deploy_model.py
 ```
 
 ### Step 8: Predict with deployed model
@@ -489,7 +489,7 @@ print(f"Deployed model saved as 'deployed_model.pkl' in {model_dir}!")
 *   We're using Jupyter notebook to create a Python file to perform prediction via the best model at `/mnt/nfs/scripts/predict_model.py`
 
 ```text-plain
-%%writefile ./data/scripts/predict_model.py
+%%writefile /mnt/nfs/scripts/predict_model.py
 #!/usr/bin/env python3
 print("------------")
 print("06-ml-pipeline-in-htcondor-executor.ipynb")
@@ -532,7 +532,7 @@ print("Task completed!")
 *   Also, make sure the python script: `/mnt/nfs/scripts/predict_model.py` is executable.
 
 ```text-plain
-!chmod 764 ./data/scripts/predict_model.py
+!chmod 764 /mnt/nfs/scripts/predict_model.py
 ```
 
 Part 2: Create DAG file for workflow management
@@ -641,7 +641,7 @@ dag = create_dag()
 
 # Set up the DAG directory
 # Write the DAG to disk
-dag_dir = os.path.abspath("./data/dags/")
+dag_dir = os.path.abspath("/mnt/nfs/dags/")
 os.makedirs(dag_dir, exist_ok=True)
 dag_file = dags.write_dag(dag, dag_dir)
 ```
