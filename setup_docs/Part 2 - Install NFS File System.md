@@ -93,7 +93,7 @@
 4\. Set up permissions:
 
 ```bash
-> sudo mkdir /home/nobody
+> sudo mkdir -p /home/nobody
 > sudo chown nobody:nogroup /home/nobody/
 > sudo chmod 777 /home/nobody/
 
