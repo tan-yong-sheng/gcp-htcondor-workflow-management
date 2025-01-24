@@ -1,8 +1,6 @@
 # Part 2 - Install NFS File System
 -----------------------------------
 
-> Note:  I am thinking to change the nfs directory from /home/tanyongsheng_net/data to /mnt/nfs , because permission issue mentioned at Step 6
-
 ## Step 1: Configure NFS Server (in HTCondor Submit Node)
 
 1\. Install NFS server packages:
