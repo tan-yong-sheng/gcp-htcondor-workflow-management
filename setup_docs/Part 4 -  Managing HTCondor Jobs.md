@@ -87,7 +87,8 @@ data.to_csv(split_data_dir / "processed_data.csv")
 
 *   The sample for the above steps is as follows: 
 
-![](/images/2_Part%204%20-%20%20Managing%20HTCondor%20Jo.png)
+![image](https://github.com/user-attachments/assets/3b0e1d46-a701-4b8d-9211-5d7a4835879d)
+
 
 ### Step 2: Train test split
 
@@ -650,19 +651,19 @@ After executing the above scripts in Jupyter notebook, `dagfile.dag` will be cre
 
 *   File location: `/mnt/nfs/dags/dagfile.dag`
 
-![](/images/4_Part%204%20-%20%20Managing%20HTCondor%20Jo.png)
+![image](https://github.com/user-attachments/assets/ba7856ad-e363-494d-b14e-c579c32419db)
 
 Some other submit files (`.sub`) will also be created as follows:
 
-![](/images/Part%204%20-%20%20Managing%20HTCondor%20Jo.jpg)
+![image](https://github.com/user-attachments/assets/f8d31c55-9260-4207-b290-3f517145e6d4)
 
 *   File location: `/mnt/nfs/dags/data_processing.sub`
 
-![](/images/5_Part%204%20-%20%20Managing%20HTCondor%20Jo.png)
+![image](https://github.com/user-attachments/assets/091517cf-40d4-486e-95a0-a4a0c251cdaa)
 
 *   File location: `/mnt/nfs/dags/train_test_split.sub`
 
-![](/images/6_Part%204%20-%20%20Managing%20HTCondor%20Jo.png)
+![image](https://github.com/user-attachments/assets/4464b3c4-218d-4366-90ec-78367e981449)
 
 *   File location: `/mnt/nfs/dags/modeling_v1.sub`
 
@@ -670,33 +671,36 @@ Some other submit files (`.sub`) will also be created as follows:
 
 *   File location: `/mnt/nfs/dags/modeling_v2.sub`
 
-![](/images/8_Part%204%20-%20%20Managing%20HTCondor%20Jo.png)
+![image](https://github.com/user-attachments/assets/cf2419ef-b457-4874-96c9-5d8a85183499)
+
 
 *   File location: `/mnt/nfs/dags/evaluate_model_v1.sub`
 
-![](/images/9_Part%204%20-%20%20Managing%20HTCondor%20Jo.png)
+![image](https://github.com/user-attachments/assets/150fb466-21f4-426e-ad95-302fad1fb0f8)
+
 
 *   File location: `/mnt/nfs/dags/evaluate_model_v2.sub`
 
-![](/images/10_Part%204%20-%20%20Managing%20HTCondor%20Jo.png)
+![image](https://github.com/user-attachments/assets/f61b5134-471a-4593-83d9-9de1e48463a7)
 
 *   File location: `/mnt/nfs/dags/deploy_best_model.sub`
 
-![](/images/11_Part%204%20-%20%20Managing%20HTCondor%20Jo.png)
+![image](https://github.com/user-attachments/assets/efbbc11d-99ed-41ba-b465-700e5b21a97e)
+
 
 *   File location: `/mnt/nfs/dags/loan_prediction.sub`
 
-![](/images/12_Part%204%20-%20%20Managing%20HTCondor%20Jo.png)
+![image](https://github.com/user-attachments/assets/ec1c8fbc-732a-4d7f-a2e8-a14edf189a7f)
 
 
 To initiate the tasks, run the follows:
 
 ```bash
-> cd ~/data/dags
+> cd /mnt/nfs/dags
 > condor_submit_dag -f dagfile.dag
 ```
 
-![](/images/15_Part%204%20-%20%20Managing%20HTCondor%20Jo.png)
+![image](https://github.com/user-attachments/assets/0a5c9f2c-a5bd-4984-9ae2-029c1109301d)
 
 To monitor the condor queue's task, run the follows:
 
@@ -704,16 +708,17 @@ To monitor the condor queue's task, run the follows:
 > watch -n 1 condor_q
 ```
 
-![](/images/16_Part%204%20-%20%20Managing%20HTCondor%20Jo.png)
+![image](https://github.com/user-attachments/assets/16d3281b-aeee-41c3-96e1-d2808f9a16b7)
+
 
 Result
 ------
 
 According to the diagram below, we have successfully run all 8 tasks via this DAGMAN workflow management tool.
 
-*   File location: `~/data/dags/dagfile.dag.metrics`
+*   File location: `/mnt/nfs/dags/dagfile.dag.metrics`
 
-![](/images/14_Part%204%20-%20%20Managing%20HTCondor%20Jo.png)
+![image](https://github.com/user-attachments/assets/17103c1c-b85a-40df-85f8-6bcd097897c1)
 
 References
 ----------
