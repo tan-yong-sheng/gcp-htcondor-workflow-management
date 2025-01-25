@@ -255,7 +255,7 @@ pickle.dump(pipe, open(staging_model_dir / 'trained_model_v2.pkl', 'wb'))
 
 ### Step 5: Evaluate trained model for Logistic Regression
 
-*   We're using Jupyter notebook to create a Python file for evaluate our Decision Tree modeling with test data at `/mnt/nfs/scripts/evaluate_model_v1.py`
+*   We're using Jupyter notebook to create a Python file for evaluate our Logistic Regression modeling with test data at `/mnt/nfs/scripts/evaluate_model_v1.py`
 
 ```text-plain
 %%writefile /mnt/nfs/scripts/evaluate_model_v1.py
